@@ -4,6 +4,10 @@ module.exports = {
   Wit: require('./lib/wit.js').Wit,
 }
 
+var express = require("express");
+
+var app = express();
+
 app.get('/webhook', function (req, res) {
   if (req.query['hub.verify_token'] === "lets_verify_my_token") {
     res.send(req.query['hub.challenge']);
