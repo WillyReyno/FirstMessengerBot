@@ -15,3 +15,7 @@ app.get('/webhook', function (req, res) {
     res.send('Error, wrong validation token');    
   }
 });
+
+app.get('/', function (req, res) {
+	res.send('hello');
+});
